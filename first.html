@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Website</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    
+    /* Fade-up animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 1s ease forwards;
+    }
+
+    /* Hover lift effect */
+    .project-card {
+      transition: all 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-pink-50 via-white to-green-50 overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav class="w-full flex items-center justify-between px-4 md:px-10 bg-[#F5F1E8] shadow-md text-[#0F4C5C] h-[12vh] relative">
+    <!-- Logo -->
+    <img src="./images/ngologo.png" alt="NGO Logo" class="h-[10vh]">
+
+    <!-- Hamburger Menu Button -->
+    <button id="menu-btn" class="md:hidden text-2xl font-bold">☰</button>
+
+    <!-- Menu -->
+    <ul id="menu"
+      class="hidden md:flex gap-4 md:gap-8 text-lg font-semibold absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row p-4 md:p-0">
+      <li class="hover:text-[#E67E22] cursor-pointer">Home</li>
+      <li class="hover:text-[#E67E22] cursor-pointer">Our Team</li>
+
+      <!-- Projects Dropdown -->
+      <li class="relative group cursor-pointer hover:text-[#E67E22]">
+        Projects ▾
+        <ul
+          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 top-full left-0 text-gray-600 space-y-2 z-50">
+          <li class="hover:text-[#E67E22]"><a href="prakalpbezuban.html">Prakalp Bezubaan</a></li>
+          <li class="relative group/paryavarana hover:text-[#E67E22]">
+             <a href="PrakalpParyavarana.html"></a>Prakalp Paryavarana ▸
+            <ul
+              class="absolute hidden group-hover/paryavarana:block bg-green-50 shadow-md rounded-lg p-3 w-60 left-full top-0 space-y-1">
+              <li>Sustainability</li>
+              <li>Tree Plantation</li>
+              <li>Waste Management</li>
+              <li>Clean Water</li>
+              <li>Climate Action</li>
+            </ul>
+          </li>
+          <li class="hover:text-[#E67E22]">Prakalp Naari Shakti</li>
+          <li class="hover:text-[#E67E22]">Prakalp Saath</li>
+          <li class="relative group/paryavarana hover:text-[#E67E22]">Mission Khushi ▸
+            <ul
+              class="absolute hidden group-hover/paryavarana:block bg-green-50 shadow-md rounded-lg p-3 w-60 left-full top-0 space-y-1">
+              <li class="hover:text-[#E67E22]">Mission Padhai</li>
+              <li class="hover:text-[#E67E22]">Mission Bhookh</li>
+            </ul>
+          </li>
+          <li class="hover:text-[#E67E22]">Prakalp Chaitanyam</li>
+          <li class="hover:text-[#E67E22]">Prakalp Mahwari</li>
+          <li class="hover:text-[#E67E22]">Prakalp Khel</li>
+        </ul>
+      </li>
+
+      <li class="hover:text-[#E67E22] cursor-pointer">Contact</li>
+    </ul>
+
+    <!-- Donate Button -->
+    <button
+      class="text-[#FFFFFF] px-5 py-2 rounded-full font-bold bg-[#F4A261] transition duration-300 shadow-md md:ml-4 mt-4 md:mt-0">
+      <a href="donationform.html">Donate Now</a>
+    </button>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class=" bg-[url('./images/pets-bg.png')]  min-h-screen bg-cover bg-center text-white py-12 sm:py-16 px-4 sm:px-6 md:px-10 text-center">
+     <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif italic mb-6 fade-up">OUR PROJECTS</h1>
+
+    <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-lg italic leading-relaxed text-gray-200 fade-up"
+      style="animation-delay:0.3s">
+      We are currently working with several projects and campaigns focusing on Animal welfare, Women empowerment,
+      Child Education and Environmental Awareness. We work on gender equality and transgender awareness.
+    </p>
+  </section>
+  <section class="text-center text-[#0F4C5C]" >
+   <div class="bg-[#F5F1E8]/80 rounded-lg p-8 md:p-12 min-h-screen bg-cover bg-center"> 
+   <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif italic mb-6 fade-up">Our Projects are:</h1>
+    
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-12 fade-up" style="animation-delay:0.1s">
+
+      <!-- Project 1 -->
+
+      <div class="project-card cursor-pointer">
+        <div
+          class="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 mx-auto rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-lg ">
+          <img src="./images/dog.png" alt="Animal Welfare" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <h3
+          class="mt-4 sm:mt-6 text-lg sm:text-xl underline underline-offset-4 hover:text-[#F4A261] transition duration-300 font-semibold">
+          <a href="prakalpbezuban.html">Prakalp Bezubaan</a>
+        </h3>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card cursor-pointer">
+        <div
+          class="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 mx-auto rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-lg">
+          <img src="./images/tree.jpg" alt="Environment" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <h3
+          class="mt-4 sm:mt-6 text-lg sm:text-xl underline underline-offset-4 hover:text-[#F4A261] transition duration-300 font-semibold">
+          <a href="PrakalpParyavarana.html">Prakalp Paryavarana</a>
+        </h3>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card cursor-pointer">
+        <div
+          class="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 mx-auto rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-lg">
+          <img src="./images/ngow.jpg" alt="Women Empowerment" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <h3
+          class="mt-4 sm:mt-6 text-lg sm:text-xl underline underline-offset-4 hover:text-[#F4A261] transition duration-300 font-semibold">
+          <a href="womenempowerment.html">Women Empowerment</a>
+        </h3>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card cursor-pointer">
+        <div
+          class="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 mx-auto rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-lg">
+          <img src="./images/baby.jpg" alt="Child Education" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <h3
+          class="mt-4 sm:mt-6 text-lg sm:text-xl underline underline-offset-4 hover:text-[#F4A261] transition duration-300 font-semibold">
+          <a href="prakalpsaath.html">Prakalp Saath</a>
+        </h3>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card cursor-pointer">
+        <div
+          class="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 mx-auto rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-lg">
+          <img src="./images/awareness.webp" alt="Together We Can Awareness" class="w-full h-full object-cover"
+            loading="lazy" />
+        </div>
+        <h3
+          class="mt-4 sm:mt-6 text-lg sm:text-xl underline underline-offset-4 hover:text-[#F4A261] transition duration-300 font-semibold">
+          <a href="prakalpchaitania.html">Prakalp Chaitanyan</a>
+        </h3>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card cursor-pointer">
+        <div
+          class="w-36 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 mx-auto rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-lg">
+          <img src="./images/awarenesses.jpeg" alt="Environment" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <h3
+          class="mt-4 sm:mt-6 text-lg sm:text-xl underline underline-offset-4 hover:text-[#F4A261] transition duration-300 font-semibold">
+          <a href="mahamari.html">Prakalp Mahwari</a>
+        </h3>
+      </div>
+
+    </div>
+    
+
+  </div>
+  </section>
+ 
+  <!-- Footer / Contact Section -->
+<section class="bg-[#0F4C5C] text-[#F5F1E8] px-6 md:px-16 py-14 relative">
+
+  <!-- Newsletter -->
+  <div class="mb-12">
+    <h2 class="text-lg md:text-xl font-semibold mb-4">
+      Subscribe To Our Newsletter
+    </h2>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <input 
+        type="email" 
+        placeholder="Enter your email here*"
+        class="border border-[#0F4C5C] px-4 py-2 w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-[#F4A261] bg-white"
+      >
+      <button class="bg-[#0F4C5C] text-white px-6 py-2 hover:bg-[#083944] transition duration-300">
+        Subscribe Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Contact Now -->
+  <div class="mb-10">
+  <h2 class="text-2xl italic font-semibold mb-4">
+    CONTACT NOW !
+  </h2>
+
+  <div class="flex gap-6 text-2xl">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/" target="_blank"
+       class="hover:text-[#F4A261] transition duration-300">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://web.whatsapp.com/" target="_blank"
+       class="hover:text-[#F4A261] transition duration-300">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/" target="_blank"
+       class="hover:text-[#F4A261] transition duration-300">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- Twitter (X) -->
+    <a href="https://twitter.com/" target="_blank"
+       class="hover:text-[#F4A261] transition duration-300">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/" target="_blank"
+       class="hover:text-[#F4A261] transition duration-300">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+  </div>
+</div>
+
+  <!-- Donate Section -->
+  <div>
+    <h2 class="text-2xl italic font-semibold mb-2">
+      DONATE HERE !
+    </h2>
+
+    <p class="mb-4 text-[#0F4C5C]/80">
+      If you wish to pay via UPI
+    </p>
+
+    <!-- Replace with your real QR image -->
+    <img src="./images/scanner.jpeg" 
+         alt="UPI QR Code"
+         class="w-40 border-4 border-[#0F4C5C] shadow-md">
+  </div>
+  <!-- UPI Details -->
+  <div class="mb-6 text-base md:text-lg">
+    <p class="font-semibold">
+      VPA : 9594465856@upi
+    </p>
+    <p>
+      Name : We For A Cause Foundation
+    </p>
+  </div>
+
+</section>
+
+
+<!-- Bottom Footer Section -->
+<section class="bg-[#0F4C5C]/80 text-white text-center py-8 border-t border-[#0F4C5C]/20">
+
+  
+
+  <!-- Copyright -->
+  <div class="text-sm md:text-base space-y-1">
+    <p>
+      Copyright © WFC (We For A Cause Foundation) 2020. All Rights Reserved
+    </p>
+    <p>
+      website developed and maintained by 
+      <span class="font-semibold hover:text-[#F4A261] transition duration-300 cursor-pointer">
+        Avani Kapdi
+      </span>
+    </p>
+  </div>
+
+</section>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
