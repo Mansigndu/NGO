@@ -127,26 +127,31 @@
 
   <!-- Projects Section -->
  <!-- Main Section Container -->
-<section class="relative lg:min-h-screen flex items-center justify-center bg-[url('./images/pets-bg.png')] bg-cover bg-center bg-no-repeat  py-12 px-4 sm:px-8">
-  
-  <!-- Overlay Content Box -->
-  <div class="w-full max-w-4xl mx-auto bg-white/30 text-black font-semibold backdrop-blur-sm rounded-2xl py-10 px-6 sm:py-16 sm:px-12 text-center shadow-2xl">
+<section class="relative lg:min-h-screen flex items-center justify-center bg-[url('./images/pets-bg.png')] bg-cover bg-center bg-no-repeat py-12 px-4 sm:px-8">
+
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full max-w-4xl mx-auto text-white font-semibold rounded-2xl py-10 px-6 sm:py-16 sm:px-12 text-center">
     
     <!-- Heading -->
-    <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif italic mb-6 tracking-wide fade-up">
+    <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif italic mb-6 sm:mb-8 lg:mb-10 tracking-wide 
+    bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
       OUR PROJECTS
     </h1>
 
     <!-- Paragraph -->
-    <p class="text-base sm:text-lg md:text-xl italic leading-relaxed text-black max-w-2xl mx-auto fade-up" style="animation-delay: 0.3s">
+    <p class="text-base sm:text-lg md:text-xl italic leading-relaxed max-w-2xl mx-auto fade-up"
+       style="animation-delay:0.3s; text-shadow:2px 2px 12px rgba(0,0,0,0.9);">
       We are currently working with several projects and campaigns focusing on 
-      <span class="font-semibold">Animal welfare</span>, 
-      <span class="font-semibold">Women empowerment</span>,
-      <span class="font-semibold">Child Education</span> and 
-      <span class="font-semibold">Environmental Awareness</span>. 
+      <span class="font-semibold text-yellow-200">Animal welfare</span>, 
+      <span class="font-semibold text-yellow-200">Women empowerment</span>,
+      <span class="font-semibold text-yellow-200">Child Education</span> and 
+      <span class="font-semibold text-yellow-200">Environmental Awareness</span>. 
       We work on gender equality and transgender awareness.
     </p>
-    
+
   </div>
 </section>
 
