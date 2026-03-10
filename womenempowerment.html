@@ -254,6 +254,14 @@ Join us in our mission to stop female infanticide, rape, domestic abuse, child m
 function goBack() {
   window.history.back();
 }
+
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
 </script>
 
 </body>
