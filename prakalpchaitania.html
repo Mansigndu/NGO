@@ -9,60 +9,74 @@
 
 </head>
 <body>
-   <nav class="w-full flex items-center justify-between px-4 md:px-10 bg-[#F5F1E8] shadow-md text-[#0F4C5C] h-[12vh] relative">
+   <nav class="w-full flex items-center justify-between px-4 md:px-10 bg-[#F5F1E8] shadow-md text-[#0F4C5C] h-[12vh] relative z-[100]">
     <!-- Logo -->
-   <a href="index.html"><img src="./images/ngologo.png" alt="NGO Logo" class="h-[10vh]"></a>
+    <a href="index.html"><img src="./images/ngologo.png" alt="NGO Logo" class="h-[8vh] md:h-[10vh]"></a>
 
     <!-- Hamburger Menu Button -->
-    <button id="menu-btn" class="md:hidden text-2xl font-bold">☰</button>
+    <button id="menu-btn" class="md:hidden text-3xl focus:outline-none" aria-label="Toggle Menu">
+      ☰
+    </button>
 
     <!-- Menu -->
-    <ul id="menu"
-      class="hidden md:flex gap-4 md:gap-8 text-lg font-semibold absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row p-4 md:p-0">
-      <li class="hover:text-[#E67E22] cursor-pointer"> <a href="index.html">Home</li></a>
+    <ul id="menu" class="hidden md:flex flex-col md:flex-row gap-4 md:gap-8 text-lg font-semibold absolute md:static top-[12vh] left-0 w-full md:w-auto bg-[#F5F1E8] md:bg-transparent shadow-md md:shadow-none p-6 md:p-0 z-50 transition-all duration-300">
+      <li class="hover:text-[#E67E22] cursor-pointer"><a href="index.html">Home</a></li>
       <li class="hover:text-[#E67E22] cursor-pointer">Our Team</li>
 
-      <!-- Projects Dropdown -->
-      <li class="relative group cursor-pointer hover:text-[#E67E22]">
-        Projects ▾
-        <ul
-          class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 top-full left-0 text-gray-600 space-y-2 z-50">
+      
+<li class="relative cursor-pointer">
+  <div id="projects-btn" class="flex justify-between items-center hover:text-[#E67E22]">
+    Projects <span class="ml-1 text-sm">▼</span>
+  </div>
+
+  <!-- Dropdown -->
+  <ul id="projects-menu" class="hidden md:absolute bg-white shadow-lg rounded-lg p-4 w-full md:w-72 top-full left-0 text-gray-600 space-y-2">
+        
           <li class="hover:text-[#E67E22]"><a href="prakalpbezuban.html">Prakalp Bezubaan</a></li>
-          <li class="relative group/paryavarana hover:text-[#E67E22]">
-             <a href="PrakalpParyavarana.html"></a>Prakalp Paryavarana ▸
-            <ul
-              class="absolute hidden group-hover/paryavarana:block bg-green-50 shadow-md rounded-lg p-3 w-60 left-full top-0 space-y-1">
-              <li>Sustainability</li>
-              <li>Tree Plantation</li>
-              <li>Waste Management</li>
-              <li>Clean Water</li>
-              <li>Climate Action</li>
+          
+          <!-- Nested Sub-menu -->
+          <li class="relative group/sub">
+            <div class="flex justify-between items-center hover:text-[#E67E22]"> <a href="PrakalpParyavarana.html">Prakalp Paryavarana <span>▸</span></a></div>
+            <ul class="md:absolute hidden group-hover/sub:md:block bg-green-50 shadow-md rounded-lg p-3 w-full md:w-60 md:left-full md:top-0 space-y-1 ml-4 md:ml-0">
+              <li class="hover:text-green-700">Sustainability</li>
+              <li class="hover:text-green-700">Tree Plantation</li>
             </ul>
           </li>
-          <li class="hover:text-[#E67E22]"> <a href="womenempowerment.html">Prakalp Naari Shakti</a></li>
-          <li class="hover:text-[#E67E22]"> <a href="prakalpsaath.html">Prakalp Saath</a></li>
-          <li class="relative group/paryavarana hover:text-[#E67E22]">Mission Khushi ▸
-            <ul
-              class="absolute hidden group-hover/paryavarana:block bg-green-50 shadow-md rounded-lg p-3 w-60 left-full top-0 space-y-1">
-              <li class="hover:text-[#E67E22]">Mission Padhai</li>
-              <li class="hover:text-[#E67E22]">Mission Bhookh</li>
-            </ul>
-          </li>
-          <li class="hover:text-[#E67E22]"> <a href="prakalpchaitania.html">Prakalp Chaitanyam</a></li>
-          <li class="hover:text-[#E67E22]"> <a href="mahamari.html">Prakalp Mahwari</a></li>
-          <li class="hover:text-[#E67E22]">Prakalp Khel</li>
+
+          <li class="hover:text-[#E67E22]"><a href="womenempowerment.html">Prakalp Naari Shakti</a></li>
+          <li class="hover:text-[#E67E22]"><a href="prakalpsaath.html">Prakalp Saath</a></li>
+          
+         
+          <li class="relative">
+  <div id="mission-btn" class="flex justify-between items-center hover:text-[#E67E22]">
+    Mission Khushi <span>▸</span>
+  </div>
+
+  <ul id="mission-menu" class="hidden md:absolute bg-green-50 shadow-md rounded-lg p-3 w-full md:w-60 md:left-full md:top-0 space-y-1 ml-4 md:ml-0">
+    <li class="hover:text-[#E67E22]">Mission Pdhayi</li>
+    <li class="hover:text-[#E67E22]">Mission Bhookh</li>
+    </ul>
+    </li>
+
+          <li class="hover:text-[#E67E22]"><a href="prakalpchaitania.html">Prakalp Chaitanyam</a></li>
+          <li class="hover:text-[#E67E22]"><a href="mahamari.html">Prakalp Mahwari</a></li>
         </ul>
       </li>
 
-      <li class="hover:text-[#E67E22] cursor-pointer"><a href="joinus.html">Contact</li></a>
+      <li class="hover:text-[#E67E22] cursor-pointer"> <a href="joinus.html">Contact</li></a>
+      
+      <!-- Mobile-only Donate Button (Optional for better flow) -->
+      <li class="md:hidden mt-4">
+        <a href="donationform.html" class="block text-center text-white px-5 py-3 rounded-full font-bold bg-[#F4A261]">Donate Now</a>
+      </li>
     </ul>
 
-    <!-- Donate Button -->
-    <button
-      class="text-[#FFFFFF] px-5 py-2 rounded-full font-bold bg-[#F4A261] transition duration-300 shadow-md md:ml-4 mt-4 md:mt-0">
-      <a href="donationform.html">Donate Now</a>
-    </button>
-  </nav>
+    <!-- Desktop Donate Button -->
+    <a href="donationform.html" class="hidden md:block text-[#FFFFFF] px-6 py-2 rounded-full font-bold bg-[#F4A261] transition hover:bg-[#E67E22] shadow-md">
+      Donate Now
+    </a>
+</nav>
+
     <section class="min-h-screen w-full flex flex-col items-center justify-evenly text-[#F5F1E8] px-10 py-10 m-auto bg-gradient-to-r from-[#0F4C5C] to-[#1D7874]">
       <div class="flex items-center gap-4 mb-10">
 
@@ -258,13 +272,41 @@
 function goBack() {
   window.history.back();
 }
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
-  const menuBtn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu");
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+    
 
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
+
+
+/* Close menu when scrolling */
+window.addEventListener("scroll", () => {
+  if(!menu.classList.contains("hidden")){
+      menu.classList.add("hidden");
+  }
+});
+// Projects dropdown
+const projectBtn = document.getElementById("projects-btn");
+const projectMenu = document.getElementById("projects-menu");
+
+projectBtn.addEventListener("click", () => {
+  projectMenu.classList.toggle("hidden");
+});
+
+
+// Mission Khushi dropdown
+const missionBtn = document.getElementById("mission-btn");
+const missionMenu = document.getElementById("mission-menu");
+
+missionBtn.addEventListener("click", () => {
+  missionMenu.classList.toggle("hidden");
+});
+
 
 </script>
 
